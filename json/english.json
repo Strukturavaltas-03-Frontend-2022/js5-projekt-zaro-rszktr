@@ -1,0 +1,17 @@
+{
+  "english": {
+    "title": "Database",
+    "name": "Name",
+    "emailAddress": "E-mail",
+    "address": "Address",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "return": "Return",
+    "alertEdit": "You must finish the current workflow!",
+    "alertInvalid": "Invalid input!",
+    "alertSuccess": "Successful save!",
+    "alertDelete": "Successful deletion!",
+    "addNewButton": "Add new person"
+  }
+}

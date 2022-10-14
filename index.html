@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <h1></h1>
+    </div>
+    <div class="img__container">
+      <img src="./img/hungary.png" class="hun" alt="magyar nyelv" tabindex="0">
+    </div>
+    <div class="img__container">
+      <img src="./img/united-kingdom.png" class="eng" alt="english language" tabindex="0">
+    </div>
+  </header>
+  <div>
+    <div class="form__field">
+      <div class="label label__name"></div>
+      <div class="input__container">
+        <input type="text" class="new__name">
+      </div>
+    </div>
+    <div class="form__field">
+      <div class="label label__emailAddress"></div>
+      <div class="input__container">
+        <input type="text" class="new__emailAddress">
+      </div>
+    </div>
+    <div class="form__field">
+      <div class="label label__address"></div>
+      <div class="input__container">
+        <input type="text" class="new__address">
+      </div>
+    </div>
+    <div class="form__field">
+      <div class="label"></div>
+      <div class="input__container">
+        <button class="button__newUser"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th class="header__id">#</th>
+          <th class="header__name"></th>
+          <th class="header__emailAddress"></th>
+          <th class="header__address"></th>
+        </tr>
+      </thead>
+      <tbody class="dynamic-table">
+      </tbody>
+    </table>
+  </div>
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

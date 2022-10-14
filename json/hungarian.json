@@ -1,0 +1,17 @@
+{
+  "hungarian": {
+    "title": "Adatbázis",
+    "name": "Név",
+    "emailAddress": "E-mail",
+    "address": "Lakcím",
+    "edit": "Szerkesztés",
+    "delete": "Törlés",
+    "save": "Mentés",
+    "return": "Visszavonás",
+    "alertEdit": "Először be kell fejezned az aktuális szerkesztést!",
+    "alertInvalid": "Valamely megadott adat formátuma nem megfelelő vagy érvénytelen!",
+    "alertSuccess": "Sikeres mentés!",
+    "alertDelete": "Sikeres törlés!",
+    "addNewButton": "Új személy hozzáadása"
+  }
+}

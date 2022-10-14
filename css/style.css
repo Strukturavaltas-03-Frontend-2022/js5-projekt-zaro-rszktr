@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  background-color: rgb(248 249 250);
+  font-family: sans-serif;
+}
+
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  height: 2rem;
+  gap: 0.5rem;
+  margin: 2rem 0 1.5rem 0;
+  padding: 0 1.25rem;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+h1 {
+  margin: 0;
+}
+
+.img__container {
+  min-width: 2rem;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.form__field {
+  display: flex;
+  align-items: baseline;
+  padding: 5px 0;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.form__field .label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  font-weight: 600;
+  flex: 0 0 6rem;
+}
+
+.input__container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.form__field input {
+  flex-grow: 1;
+  min-width: 182.73px;
+  max-width: 33%;
+  padding: 10px;
+  border: 2px solid transparent;
+}
+
+.form__field button {
+  flex-grow: 1;
+  min-width: 182.73px;
+  max-width: 33%;
+  padding: 7px;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+}
+
+.form__field button:hover {
+  cursor: pointer;
+  background-color: rgb(67, 114, 202);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(121, 121, 121);
+}
+
+table {
+  width: 80%
+}
+
+th {
+  text-align: left;
+}
+
+.header__id {
+  text-align: center;
+}
+
+tr> :first-child {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container button {
+  border: none;
+  border-radius: 0.25rem;
+  width: 100px;
+  height: 100%;
+  padding: 7px 15px;
+}
+
+.container input {
+  width: 100%;
+  padding: 0.45rem 1rem;
+  border-radius: 0.25rem;
+}
+
+td:has(> button) {
+  width: 100px;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+  width: 33%;
+}
+
+.container button:hover {
+  cursor: pointer;
+}
+
+.button__edit {
+  background-color: rgb(112, 157, 240);
+  color: white;
+}
+
+.button__edit:hover {
+  background-color: rgb(138, 176, 248);
+}
+
+.button__delete {
+  background-color: rgb(197, 95, 95);
+  color: white;
+}
+
+.button__delete:hover {
+  background-color: rgb(224, 123, 123);
+  color: white;
+}
+
+.button__save {
+  background-color: rgb(149, 197, 95);
+  color: white;
+}
+
+.button__save:hover {
+  background-color: rgb(174, 221, 120);
+  color: white;
+}
+
+.button__return {
+  background-color: rgb(148, 148, 148);
+  color: white;
+}
+
+.button__return:hover {
+  background-color: rgb(189, 189, 189);
+  color: white;
+}
+
+input {
+  border: none;
+  border-radius: 0.2rem;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.valid {
+  border: 2px solid rgb(40 167 69) !important;
+}
+
+.valid:focus {
+  border: 2px solid rgb(40 167 69) !important;
+}
+
+.invalid {
+  border: 2px solid rgb(220 53 69 / 90%) !important;
+}
+
+.invalid:focus {
+  border: 2px solid rgb(220 53 69 / 90%) !important;
+}
+
+
+/* TOASTS */
+
+#toastStack {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-height: 94vh;
+  display: grid;
+  grid-template-columns: 100vw;
+  gap: 0.6rem;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#toastStack::-webkit-scrollbar {
+  display: none;
+}
+
+.toast {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  margin-inline: 1rem;
+
+  border-width: 1px;
+  border-style: solid;
+
+  box-shadow: rgba(99, 99, 99, 0.6) 0px 2px 8px 0px;
+
+  color: rgb(248 249 250);
+  font-weight: 300;
+
+  animation: fadeIn 0.5s;
+}
+
+.toast:first-of-type {
+  margin-block-start: 0rem;
+}
+
+.toast:last-of-type {
+  margin-block-end: 1rem;
+}
+
+.toast__close {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(248 249 250);
+}
+
+.toast--edit {
+  background: rgb(80, 178, 218);
+  border-color: rgb(80, 178, 218);
+}
+
+.toast--edit:hover {
+  background: rgb(67, 161, 199);
+  border-color: rgb(67, 161, 199);
+}
+
+.toast--delete {
+  background: rgb(143, 77, 196);
+  border-color: rgb(143, 77, 196);
+}
+
+.toast--delete:hover {
+  background: rgb(127, 66, 177);
+  border-color: rgb(127, 66, 177);
+}
+
+.toast--invalidAlert {
+  background: rgb(201, 61, 61);
+  border-color: rgb(201, 61, 61);
+}
+
+.toast--invalidAlert:hover {
+  background: rgb(179, 50, 50);
+  border-color: rgb(179, 50, 50);
+}
+
+.toast--success {
+  border-color: rgb(40 167 69 / 90%);
+  background-color: rgb(40 167 69 / 90%);
+}
+
+.toast--success:hover {
+  border-color: rgb(40 167 69);
+  background-color: rgb(40 167 69);
+}
+
+.toast--hide {
+  animation: fadeOut 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
